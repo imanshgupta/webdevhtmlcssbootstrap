@@ -1,0 +1,14 @@
+img{
+    height: 200px;
+    width: 25%;
+    margin: 4%;
+    border-bottom: 5px solid rgba(97, 85, 85, 0.555);
+    padding-bottom: 5px;
+}
+nav h4{
+    border-bottom: 5px solid rgba(97, 85, 85, 0.555);
+    border-radius: 2%;
+    width: 30%;
+    margin-left:4%;
+    font-size: 1.5em;
+}
