@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="xml.css"?>
-
-<!DOCTYPE students [
-    <!ELEMENT students (name, age)>
-    <!ELEMENT name (#PCDATA)>
-    <!ELEMENT age (#PCDATA)>
-]>
-<students>
-        <name>ANSH</name>
-        <age>21</age>
-</students>
+<?xml version="1.0" encoding="UTF-8" ?>
+<student-info>
+	<student>
+		<usn>RVCE20MCA064</usn>
+		<name>Durgesh</name>
+		<college>RV COLLEGE</college>
+		<city>benaluru</city>
+		<year>2021</year>
+	</student>
+	<student>
+		<usn>RVCE20MCA02</usn>
+		<name>Prince</name>
+		<college>RV COLLEGE</college>
+		<city>benaluru</city>
+		<year>2021</year>
+	</student>
+    </student-info>
