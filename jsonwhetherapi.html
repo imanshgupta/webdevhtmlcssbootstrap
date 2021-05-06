@@ -17,20 +17,30 @@
         var post=new XMLHttpRequest();
         
         post.onreadystatechange = function() {
-            if(readyState==4 && status==200)
+            if(post.readyState==4 && post.status==200)
             {
                 var data=JSON.parse(post.responseText);
                 var myjson=JSON.stringify(data);
-                data(myjson);
+                dataa(data);
             }
         }
-        post.open(GET,"https://jsonplaceholder.typicode.com/posts",true);
+        post.open("GET","https://jsonplaceholder.typicode.com/posts",true);
         post.send();
         })
         
-        function data(json)
+        function dataa(json)
         {
-            d.insertAdjacentElement("afterend",json);
+            console.log(json)
+            index=1;
+            str=""
+            for(x=0;x<=10;x++)
+            {
+                str=str + json[index].title
+                
+                index++
+            }
+            d.innerText=str
+            
         }
     </script>
 </body>
