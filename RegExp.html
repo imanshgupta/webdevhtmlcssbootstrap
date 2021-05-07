@@ -10,21 +10,23 @@
     <form name="form">
         <label for="box">username please</label>
         <input type="text" name="box" id="usrname">
-        <input type="button" name="" id="" onclick="auth()" value="click to submit">
+        <input type="button" name="" id="butt"  value="click to submit">
     </form>
     <script type ="text/javascript">
-        function auth()
-        {
+        
             var regex=/^[1-4A-ZA-Z0-90-9A-ZA-Z0-90-90-9]{10}$/
-            var inp=docment.getElemntById(usrname)
-            if(inp.test(regex))
+            document.getElementById("butt").addEventListener("click",()=>{
+                var inp=document.getElementById("usrname").value;
+            if(regex.test(inp))
             {
                 alert("the regex is working properly")   
             }
             else{
                 alert("margya regex tumhara")
             }
-        }
+            })
+           
+        
     </script>
 </body>
 </html>
