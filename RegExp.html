@@ -17,6 +17,11 @@
             var regex=/^[1-4A-ZA-Z0-90-9A-ZA-Z0-90-90-9]{10}$/
             document.getElementById("butt").addEventListener("click",()=>{
                 var inp=document.getElementById("usrname").value;
+                var con=confirm("sure you want to procede")
+                if(con)
+                {
+
+                
             if(regex.test(inp))
             {
                 alert("the regex is working properly")   
@@ -24,7 +29,9 @@
             else{
                 alert("margya regex tumhara")
             }
+                }
             })
+
            
         
     </script>
