@@ -1,11 +1,13 @@
-var faker = require("faker"),
-  mysql = require("mysql");
-var connection = mysql.createConnection({
+var mysql2 = require("mysql2");
+var con = mysql2.createConnection({
   host: "localhost",
   user: "root",
+  password: "artimanish123",
   database: "connection",
 });
-/*for (i = 0; i <= 100; i++) {
-  console.log(faker.internet.email());
-  console.log(faker.date.past());
-}*/
+var q = "USE CONNECTION";
+con.query(q, (err, result, fields) => {
+  if (err) throw err;
+  console.log(result);
+});
+con.end();
