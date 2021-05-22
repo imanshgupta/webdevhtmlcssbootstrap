@@ -10,4 +10,3 @@ con.query(q, (err, result, fields) => {
   if (err) throw err;
   console.log(result);
 });
-con.end();
