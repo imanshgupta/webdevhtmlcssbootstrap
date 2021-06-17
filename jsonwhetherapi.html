@@ -30,16 +30,12 @@
         
         function dataa(json)
         {
-            console.log(json)
-            index=1;
-            str=""
-            for(x=0;x<=10;x++)
-            {
-                str=str + json[index].title
-                
-                index++
-            }
-            d.innerText=str
+            a=[]
+            a.push(json)
+            a.forEach(element => {
+             console.log(element)   
+            });
+            
             
         }
     </script>
