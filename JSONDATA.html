@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="click to show JSON data" onclick="show()">
+    <div id="div"></div>
+    <script>
+        function show(){
+        a=[{"name":"ansh","marks":24},{"name":"ansh","marks":24},{"name":"ansh","marks":24}]
+        str="<table border=1> <th><td>NAME</td><td>MARKS</td></th>"
+        a.map((ob)=>{
+            str+="<tr><td>"+ob.name+"</td><td>"+ob.marks+"</td></tr>";
+        })
+        str+="</table>"
+        document.getElementById("div").innerHTML=str;
+    }
+    </script>
+</body>
+</html>
