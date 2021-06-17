@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <title>Document</title>
+    <style>
+        #graph{
+            width:500px;
+            height:500px;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="text">Student name</label>
+        <input type="text" id="text" name="text">
+        <label for="marks">Marks</label>
+        <input type="number" name="marks" id="marks">
+        <input type="button" onclick=add(this.form) value="CLICK">   
+    </form>
+    <div id="graph"></div>
+<script>
+     d=[];
+    function add(form){
+        d.push({
+            "name":form.text.value,
+            "marks":form.marks.value
+            
+        })
+        document.getElementById("graph").innerHTML="";
+        chart()
+
+    }
+    function chart(){
+
+    
+    scale=10;
+    
+    var svg = d3.select("#graph").append("svg").attr('width','100%').attr('height',"100%");
+    svg.selectAll('g').data(d).enter().append('g').append('rect').attr('width',"10px").attr('height',(d)=>{return d.marks*scale}).attr('fill','black')
+    .attr('x',(d,i)=>{return i*scale}).attr("y","0").style('padding',"50px")
+    }
+    </script>
+</body>
+</html>
