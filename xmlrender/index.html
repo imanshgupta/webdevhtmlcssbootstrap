@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="CLICK To RENDER XML DATA" onclick="render()">
+    <table id="table"></table>
+    <script>
+        function render(){
+            var obj=new XMLHttpRequest;
+            obj.onreadystatechange=function (){
+                if(this.readyState==4 && this.status==200){
+                    printdata(this)
+
+                }
+            };
+            obj.open("GET","student.xml",true)
+            obj.send()
+        }
+        function printdata(xml){
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>USN</th><th>NAME</th></tr>";
+            var x = xmlDoc.getElementsByTagName("student");
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("usn")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+</body>
+</html>
