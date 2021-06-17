@@ -15,7 +15,6 @@
             obj.onreadystatechange=function (){
                 if(this.readyState==4 && this.status==200){
                     printdata(this)
-
                 }
             };
             obj.open("GET","student.xml",true)
