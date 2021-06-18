@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student-info>
+	<student>
+		<name>ANSH</name>
+		<USN>RVCE20MCA074</USN>
+		<cource>JAVASCRIPT</cource>
+	</student>
+	<student>
+		<name>SHUBHAM</name>
+		<USN>RVCE20MCA074</USN>
+		<cource>JAVASCRIPT</cource>
+	</student>
+	<student>
+		<name>ANSHUL</name>
+		<USN>RVCE20MCA074</USN>
+		<cource>JAVASCRIPT</cource>
+	</student>
+	<student>
+		<name>PULKIT</name>
+		<USN>RVCE20MCA074</USN>
+		<cource>JAVASCRIPT</cource>
+	</student>
+	<student>
+		<name>SHIVAM</name>
+		<USN>RVCE20MCA074</USN>
+		<cource>JAVASCRIPT</cource>
+	</student>
+	<student>
+		<name>KARTIK</name>
+		<USN>RVCE20MCA074</USN>
+		<cource>JAVASCRIPT</cource>
+	</student>
+</student-info>

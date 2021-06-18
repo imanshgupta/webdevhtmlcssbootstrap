@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<input type="button" value="click to get data" onclick="render()">
+<table id="target"></table>
+
+<script>
+	function render(){
+		var obj = new XMLHttpRequest();
+		obj.readystatechange=function(){
+			if(this.readyState==400 && this.status==2){display(this)}
+		}
+		obj.open("GET","student.xml",true);
+		obj.send();
+	}
+	function display(xml){
+	var i;
+	var data=xml.responseXML;
+	var table="<tr><th>NAME</th><th>USN</th><th>COURSE</th>"
+	var x=data.getElementsByTagName("student");
+	for(i=0;i<x.length;i++){
+		table+="<tr><td>"+
+				x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+"</td><td>"+
+				x[i].getElementsByTagName("USN")[0].childNodes[0].nodeValue+"</td><td>"+
+				x[i].getElementsByTagName("course")[0].childNodes[0].nodeValue+
+				"</td></tr>"
+	}
+	document.getElementById("target").innerHTML=table;
+	}
+</script>
+</body>
+</html>
